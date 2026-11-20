@@ -1,0 +1,10 @@
+{
+  "app": "SPD",
+  "message": "Contact Praveen Kumar B to get access.",
+
+  "default": "allow",
+
+  "machines": [
+    { "id": "SPD-0000-0000-0000", "name": "EXAMPLE - replace with a real Machine ID", "status": "block", "expires": "" }
+  ]
+}
