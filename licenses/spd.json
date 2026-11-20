@@ -6,7 +6,7 @@
     {
       "id": "SPD-1958-F722-404A",
       "name": "LAPTOP-9MFVFHJN / Admin",
-      "status": "block",
+      "status": "allow",
       "expires": ""
     }
   ]
