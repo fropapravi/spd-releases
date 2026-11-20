@@ -2,12 +2,5 @@
   "app": "SPD",
   "message": "Contact Praveen Kumar B to get access.",
   "default": "allow",
-  "machines": [
-    {
-      "id": "SPD-1958-F722-404A",
-      "name": "LAPTOP-9MFVFHJN / Admin",
-      "status": "block",
-      "expires": "2026-12-20"
-    }
-  ]
+  "machines": []
 }
