@@ -1,0 +1,39 @@
+name: Serial redeem
+# A PC pastes a serial number in SPD -> SPD opens an issue "[SPD serial] ..." -> this binds the serial
+# to that ONE Machine ID (one serial = one PC, ever) and adds the PC to licenses/<app>.json.
+on:
+  issues:
+    types: [opened]
+permissions:
+  contents: write
+  issues: write
+concurrency:
+  group: licence-list        # one at a time -> the same serial can never be given to two PCs
+  cancel-in-progress: false
+jobs:
+  redeem:
+    if: startsWith(github.event.issue.title, '[') && contains(github.event.issue.title, ' serial]')
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with: { ref: main }
+      - name: Redeem
+        env:
+          GH_TOKEN: ${{ github.token }}
+          NUM: ${{ github.event.issue.number }}
+          BODY: ${{ github.event.issue.body }}
+          REPO: ${{ github.repository }}
+        run: |
+          git config user.name "spd-licence-bot"; git config user.email "bot@users.noreply.github.com"
+          for try in 1 2 3 4 5; do
+            git fetch -q origin main && git reset -q --hard origin/main
+            python3 tools/redeem.py > result.txt || true
+            if git diff --quiet; then break; fi
+            git commit -qam "Serial redeemed (#$NUM)" && git push -q origin HEAD:main && break
+            sleep 3
+          done
+          RES="$(cat result.txt)"
+          gh issue comment "$NUM" -R "$REPO" -b "$RES"
+          # hide the plain serial from the public issue
+          gh issue edit "$NUM" -R "$REPO" -b "Serial activation request (serial removed). $(head -c 60 result.txt)"
+          gh issue close "$NUM" -R "$REPO"
