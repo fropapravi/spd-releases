@@ -25,6 +25,14 @@
       "created": "2026-11-21",
       "used_by": "",
       "revoked": true
+    },
+    {
+      "hash": "282eae268c957713fe51619c8418ca330b341f08fed9d09687fb8cd82ef37b9d",
+      "hint": "SPD-LD7QQ",
+      "days": 7,
+      "note": "Space craft - trail licence",
+      "created": "2026-11-21",
+      "used_by": ""
     }
   ]
 }
