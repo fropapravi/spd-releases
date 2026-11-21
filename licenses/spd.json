@@ -16,5 +16,14 @@
       "expires": ""
     }
   ],
-  "serials": []
+  "serials": [
+    {
+      "hash": "ad78f498f64e5faa813140c0944375a0a5a18419f6d1ffec8c641a33ca1bc4ca",
+      "hint": "SPD-VGE2S",
+      "days": 7,
+      "note": "Company x",
+      "created": "2026-11-21",
+      "used_by": ""
+    }
+  ]
 }
