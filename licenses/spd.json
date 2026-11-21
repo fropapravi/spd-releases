@@ -23,7 +23,8 @@
       "days": 7,
       "note": "Company x",
       "created": "2026-11-21",
-      "used_by": ""
+      "used_by": "",
+      "revoked": true
     }
   ]
 }
