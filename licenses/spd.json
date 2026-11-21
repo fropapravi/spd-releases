@@ -1,7 +1,7 @@
 {
   "app": "SPD",
   "message": "Contact Praveen Kumar B to get access.",
-  "default": "allow",
+  "default": "block",
   "machines": [
     {
       "id": "SPD-1958-F722-404A",
