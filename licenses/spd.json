@@ -14,6 +14,13 @@
       "name": "DESKTOP-VAN64KT / Cybo",
       "status": "allow",
       "expires": ""
+    },
+    {
+      "id": "SPD-0000-0000-0001",
+      "name": "TESTPC / test",
+      "status": "allow",
+      "expires": "2026-11-22",
+      "serial": "SPD-TEST1"
     }
   ],
   "serials": [
@@ -23,7 +30,9 @@
       "days": 1,
       "note": "test (auto-removed)",
       "created": "2026-11-21",
-      "used_by": ""
+      "used_by": "SPD-0000-0000-0001",
+      "used_on": "2026-11-21",
+      "used_pc": "TESTPC / test"
     }
   ]
 }
