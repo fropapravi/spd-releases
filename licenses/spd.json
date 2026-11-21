@@ -16,5 +16,14 @@
       "expires": ""
     }
   ],
-  "serials": []
+  "serials": [
+    {
+      "hash": "41d7267c84f7b392d934ecd42baecc9bd9248cee71e2df2b2e33f1ba57481c5f",
+      "hint": "SPD-TEST1",
+      "days": 1,
+      "note": "test (auto-removed)",
+      "created": "2026-11-21",
+      "used_by": ""
+    }
+  ]
 }
